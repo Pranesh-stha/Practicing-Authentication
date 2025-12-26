@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", monospace;
+  background-color: #0a0a0a;
+  color: #00ff41;
+  overflow: hidden;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
+button {
+  padding: 12px 24px;
+  margin: 10px;
+  background-color: #00ff41;
+  color: #0a0a0a;
+  border: 2px solid #00ff41;
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #0a0a0a;
+  color: #00ff41;
+  box-shadow: 0 0 10px #00ff41, inset 0 0 10px rgba(0, 255, 65, 0.2);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+input {
+  padding: 12px;
+  margin: 10px;
+  background-color: #1a1a1a;
+  color: #00ff41;
+  border: 2px solid #00ff41;
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus {
+  box-shadow: 0 0 10px #00ff41, inset 0 0 5px rgba(0, 255, 65, 0.2);
+}
+
+input::placeholder {
+  color: #00ff41;
+  opacity: 0.5;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.content {
+  position: absolute;
+  z-index: 20;
+  text-align: center;
+  padding: 40px;
+  background-color: rgba(10, 10, 10, 0.8);
+  border: 2px solid #00ff41;
+  border-radius: 8px;
+  box-shadow: 0 0 20px #00ff41;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #00ff41;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px #00ff41;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+}
