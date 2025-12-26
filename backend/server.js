@@ -41,11 +41,17 @@ app.post("/login", (req, res) => {
       if (dbRes.rows.length === 0) {
         res.json({ msg: "username not found", state: false });
       } else {
-        if (dbRes.rows[0].password === password) {
-          res.json({ msg: "correct password", state: true });
-        } else {
-          res.json({ msg: "Wrong password", state: false });
-        }
+        bcrypt.compare(password, dbRes.rows[0].password, (err, result) => {
+          if (err) {
+            console.log("error while comparing pw", err);
+          } else {
+            if (result) {
+              res.json({ msg: "correct password", state: true });
+            } else {
+              res.json({ msg: "Wrong password", state: false });
+            }
+          }
+        });
       }
     }
   );
