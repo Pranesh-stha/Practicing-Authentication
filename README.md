@@ -1,5 +1,3 @@
-Here’s a **clean, beginner-friendly `README.md`** you can directly copy into your GitHub repo. It’s brief, welcoming, and explains exactly what your project does and how to run it 👇
-
 ---
 
 # 🔐 Authentication & Credential Handling App
