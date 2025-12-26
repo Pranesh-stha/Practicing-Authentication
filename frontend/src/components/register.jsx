@@ -27,7 +27,7 @@ function Register() {
 
     const feedback = await axios.post("http://localhost:5000/register", newCred)
     if(feedback.data.state === true){
-      navigate("/secrets");
+      navigate("/login");
       console.log(feedback.data.message)
     } else{
       setStatus(feedback.data.message)
